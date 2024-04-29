@@ -1,0 +1,22 @@
+<mvc:View
+    controllerName="com.tema.pedidos.controller.Details"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+>
+    <Page
+        id="page"
+        title="{i18n>title}"
+    >
+        <content>
+            <ObjectHeader
+                id="objectHeader"
+                title="{NumeroPedido} - {Descripcion}"
+            >
+            </ObjectHeader>
+            <List id="listaProductos" items="{posiciones}">
+                <DisplayListItem id="textoProducto" label="{Txz01}" value="{Menge}" />
+            </List>
+        </content>
+    </Page>
+</mvc:View>

@@ -1,0 +1,35 @@
+<mvc:View
+    controllerName="com.tema.pedidos.controller.Home"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+>
+    <Page
+        id="page"
+        title="{i18n>title}"
+    >
+        <content>
+            <Table
+                id="idProductsTable"
+                items="{porderList>/d/results}"
+            >
+                <columns>
+                    <Column id="columnPedido">
+                        <Text text="{i18n>columnNumeroPedido}" />
+                    </Column>
+                    <Column>
+                        <Text text="Descripción" />
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem vAlign="Middle" type="Navigation" press="onPressItem">
+                        <cells>
+                            <ObjectIdentifier text="{porderList>NumeroPedido}" />
+                            <Text text="{porderList>Descripcion}" />
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </content>
+    </Page>
+</mvc:View>
